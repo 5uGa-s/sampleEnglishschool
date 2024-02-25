@@ -1,0 +1,1345 @@
+@charset "UTF-8";
+body {
+  color: #082B48;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  line-height: 1.5;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+  color: #082B48;
+}
+a:hover {
+  opacity: 0.7;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+.container::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+/*=====================================
+ヘッダー
+======================================*/
+header {
+  padding: 8px 0 75px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 16px;
+  background-color: #fff;
+  z-index: 9999;
+}
+
+.header-left {
+  float: left;
+}
+.header-title {
+  font-size: 24px;
+  font-weight: bold;
+}
+.header-right {
+  float: right;
+}
+.header-nav-item {
+  float: left;
+  margin-left: 50px;
+}
+.header-nav-item a {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 36px;
+}
+.header-nav-img {
+  width: 17px;
+  height: 17px;
+  vertical-align: -2px;
+}
+.header-img {
+  width: 35px;
+  height: 35px;
+  margin-right: 5px;
+  vertical-align: -4px;
+}
+
+.menu {
+  display: none;
+}
+
+/*=====================================
+ドロワーメニュー
+======================================*/
+ul li a {
+  display: block;
+  color: #082B48;
+  padding: 3px 0;
+}
+
+#toggle {
+  position: relative;
+}
+
+.toggle-list {
+  display: none;
+  width: 120px;
+  position: absolute;
+  top: 40px;
+  left: 0px;
+  background-color: #fff;
+  opacity: 0.8;
+  padding-left: 3px;
+  border-radius: 5px;
+}
+
+.header-nav {
+  display: flex;
+}
+.header-nav-iem:not(:first-child) {
+  margin-left: 30px;
+}
+
+/*==============================
+section 共通クラス
+===============================*/
+.section {
+  padding: 10px 0;
+}
+.section-title {
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 40px;
+}
+.section-text {
+  font-size: 18px;
+  text-align: center;
+  padding-left: 10px;
+  padding-bottom: 20px;
+  margin-bottom: 50px;
+  border-bottom: 1px solid #082B48;
+}
+.section-text2 {
+  font-size: 18px;
+  padding-top: 8px;
+}
+
+/*==============================
+サイドバー
+===============================*/
+* {
+  box-sizing: border-box;
+}
+
+.side-nav {
+  display: flex;
+  margin-top: -260px;
+  position: fixed;
+  z-index: 9999;
+}
+.side-text {
+  margin-top: -15px;
+  margin-left: 17px;
+  font-size: 10px;
+}
+.side-navigation {
+  display: flex;
+  height: 265px;
+  width: 80px;
+  position: relative;
+  background-color: #a9e3fb;
+  box-shadow: 12px 0 0 #72cff7;
+  border-left: 5px solid #a9e3fb;
+  overflow: clip;
+  transition: all 0.5s;
+  border-radius: 30px;
+  z-index: 9999;
+  top: 336px;
+}
+.side-navigation:hover {
+  width: 250px;
+}
+.side-navigation ul {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  width: 100%;
+  padding-left: 10px;
+}
+.side-navigation ul li:hover {
+  background-color: #85d2f3;
+  border-radius: 10px;
+}
+.side-navigation ul li {
+  list-style: none;
+  display: block;
+  width: 100%;
+  position: relative;
+  border-radius: 10px;
+}
+.side-navigation ul li.active {
+  background-color: #72cff7;
+}
+.side-navigation ul li.active::before {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: -30px;
+  right: 0;
+  border-radius: 30%;
+  box-shadow: 15px 15px 0 #72cff7;
+}
+.side-navigation ul li.active::after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  bottom: -30px;
+  right: 0;
+  border-radius: 30%;
+  box-shadow: 15px -15px 0 #72cff7;
+}
+.side-navigation ul li a {
+  text-decoration: none;
+  color: #082B48;
+  font-weight: bold;
+  width: 100%;
+  display: flex;
+  position: relative;
+}
+.side-navigation ul li a .icon {
+  display: block;
+  min-width: 45px;
+  height: 10px;
+  line-height: 45px;
+  padding-top: 6px;
+  padding-left: 10px;
+  text-align: center;
+}
+.side-navigation ul li a .icon ion-icon {
+  font-size: 2.1rem;
+}
+.side-navigation ul li a .title {
+  padding-left: 20px;
+  padding-top: 4px;
+  height: 50px;
+  line-height: 40px;
+  white-space: nowrap;
+}
+
+.list {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+/*==============================
+top
+===============================*/
+.experience-top {
+  margin-top: 85px;
+}
+.experience-img {
+  display: block !important;
+}
+.experience-img2 {
+  display: none !important;
+}
+
+/*==============================
+top  入会金お得ボタン
+===============================*/
+.btn {
+  text-align: center;
+  margin: 58px 0 0 0;
+  line-height: 1px;
+}
+.btn a {
+  display: inline-block;
+  padding: 18px 40px 20px 40px;
+  background: #fd865c;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 999px;
+  -webkit-animation: purupuru_anim 1s infinite alternate;
+          animation: purupuru_anim 1s infinite alternate;
+}
+.btn a {
+  display: inline-block;
+  padding: 18px 40px 20px 40px;
+  background: #fd865c;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 999px;
+  -webkit-animation: purupuru_anim 1.5s infinite;
+          animation: purupuru_anim 1.5s infinite;
+}
+@-webkit-keyframes purupuru_anim {
+  0% {
+    transform: translate(0, 0);
+  }
+  5% {
+    transform: translate(-5px, 0);
+  }
+  10% {
+    transform: translate(5px, 0);
+  }
+  15% {
+    transform: translate(-5px, 0);
+  }
+  20% {
+    transform: translate(5px, 0);
+  }
+  25% {
+    transform: translate(-5px, 0);
+  }
+  30% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+@keyframes purupuru_anim {
+  0% {
+    transform: translate(0, 0);
+  }
+  5% {
+    transform: translate(-5px, 0);
+  }
+  10% {
+    transform: translate(5px, 0);
+  }
+  15% {
+    transform: translate(-5px, 0);
+  }
+  20% {
+    transform: translate(5px, 0);
+  }
+  25% {
+    transform: translate(-5px, 0);
+  }
+  30% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+.btn ion-icon {
+  display: inline-block;
+  padding: 0 18px 0 0;
+  width: 40px;
+  height: 40px;
+}
+.btn-click {
+  font-size: 16px;
+  font-weight: bold;
+  margin-right: 30%;
+  padding-top: 20px;
+  margin-top: 20px;
+  border-bottom: solid 1px #fff;
+}
+.btn-text {
+  font-size: 25px;
+  font-weight: bold;
+  padding-top: 0;
+}
+.btn-shine a {
+  position: relative;
+  overflow: hidden;
+}
+.btn-shine a:after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 10%;
+  height: 150%;
+  background: #fff;
+  transform: rotate(45deg);
+  -webkit-animation: reflect 3s ease-in-out infinite;
+          animation: reflect 3s ease-in-out infinite;
+}
+
+@-webkit-keyframes reflect {
+  0%, 75% {
+    transform: rotate(45deg) scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(45deg) scale(100);
+    opacity: 0;
+  }
+}
+
+@keyframes reflect {
+  0%, 75% {
+    transform: rotate(45deg) scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(45deg) scale(100);
+    opacity: 0;
+  }
+}
+/*==============================
+トップタイトル
+===============================*/
+.ex-title-text {
+  text-align: center;
+  margin-top: 45px;
+  padding-top: 20px;
+  margin-bottom: 50px;
+  font-size: 36px;
+  font-weight: bold;
+}
+
+/*=====================================
+ポップアップ広告
+======================================*/
+.pop-btn-apply {
+  display: inline-block;
+  font-size: 20px;
+  padding: 12px 28px 14px 40px;
+  background: #3448a1;
+  box-shadow: 0 2px 0 #2b3d8e;
+  color: #fff;
+  border-bottom: 1px solid #bbb8b8;
+  text-decoration: none;
+  border-radius: 999px;
+  -webkit-animation: purupuru_anim 1s infinite alternate;
+          animation: purupuru_anim 1s infinite alternate;
+  position: fixed;
+  z-index: 9999;
+  position: absolute;
+  bottom: 23px;
+  left: 176px;
+  line-height: 25px;
+}
+.pop-btn-apply:hover {
+  opacity: 0.9;
+}
+.pop-btn-apply:active {
+  box-shadow: none;
+  transform: translateY(5px);
+}
+.pop-wrapper {
+  bottom: 0;
+  position: relative;
+  position: fixed;
+  z-index: 99999;
+}
+.pop-img {
+  width: 380px;
+}
+
+@keyframes purupuru_anim {
+  0% {
+    transform: translate(0, 0);
+  }
+  5% {
+    transform: translate(-5px, 0);
+  }
+  10% {
+    transform: translate(5px, 0);
+  }
+  15% {
+    transform: translate(-5px, 0);
+  }
+  20% {
+    transform: translate(5px, 0);
+  }
+  25% {
+    transform: translate(-5px, 0);
+  }
+  30% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+/*==============================
+about 無料体験
+===============================*/
+.ex-about-left {
+  float: left;
+  width: 49%;
+  margin-left: 23px;
+  margin-top: 20px;
+}
+.ex-about-img {
+  border-radius: 10px;
+}
+.ex-about-right {
+  float: right;
+  width: 46%;
+  margin-right: 16px;
+  margin-top: 24px;
+}
+.ex-about-title {
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  padding-bottom: 0;
+  margin-bottom: 10px;
+}
+.ex-about-text {
+  font-size: 18px;
+  line-height: 34px;
+}
+.ex-about-point {
+  font-size: 12px;
+}
+.ex-about-border {
+  border-bottom: solid 2px #082B48;
+}
+.ex-about-color {
+  background: linear-gradient(transparent 70%, rgba(255, 153, 0, 0.5) 80%);
+  display: inline;
+}
+
+/*==============================
+about ステップ
+===============================*/
+.ex-step {
+  padding: 25px 0 15px 0;
+}
+.ex-step-title {
+  text-align: center;
+  margin-top: 40px;
+  padding-top: 10px;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  font-size: 25px;
+  font-weight: bold;
+}
+.ex-step-item {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.ex-step-img {
+  width: 380px;
+  padding-top: 0;
+  margin-top: 0;
+  padding-bottom: 20px;
+}
+.ex-step-text-item {
+  display: inline-flex;
+}
+.ex-step-text-title1 {
+  text-align: center;
+  font-size: 21px;
+  width: 75%;
+  margin-left: 46px;
+  font-weight: bold;
+  list-style: none;
+  border-bottom: 1px dashed #082B48;
+  padding-top: 10px;
+  margin-bottom: 10px;
+}
+.ex-step-text-title2 {
+  text-align: center;
+  font-size: 21px;
+  width: 75%;
+  margin-left: 63px;
+  font-weight: bold;
+  list-style: none;
+  border-bottom: 1px dashed #082B48;
+  padding-top: 10px;
+  margin-bottom: 10px;
+}
+.ex-step-text-title3 {
+  text-align: center;
+  font-size: 21px;
+  width: 75%;
+  padding-left: 35px;
+  font-weight: bold;
+  list-style: none;
+  border-bottom: 1px dashed #082B48;
+  padding-top: 10px;
+  margin-bottom: 10px;
+}
+.ex-step-message {
+  text-align: center;
+  margin: 0 100px;
+  padding: 0 20px;
+  font-size: 19px;
+  line-height: 34px;
+  padding-top: 0;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+/*==============================
+キャンペーン
+===============================*/
+.experience-cp {
+  margin-top: 50px;
+  padding: 9px 0;
+  background-color: #eeac73;
+}
+
+.ex-cp-title {
+  padding-top: 0;
+  margin: 0;
+  text-align: center;
+  font-weight: bold;
+  color: #fff;
+}
+.ex-cp-text {
+  font-size: 32px;
+  text-shadow: 0 0 10px #d37c03;
+  margin-bottom: 0;
+  line-height: 43px;
+}
+.ex-cp-point {
+  font-size: 45px;
+  color: #fae579;
+}
+.ex-cp-point2 {
+  font-size: 20px;
+}
+.ex-cp-img {
+  width: 31%;
+  margin-top: 0;
+  padding-top: 10px;
+  margin-right: 10%;
+  margin-bottom: 40px;
+}
+
+/*==============================
+contact
+===============================*/
+.contact {
+  background-image: url(../img/申込背景.png);
+  margin-top: 0;
+  padding-top: 55px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.contact-message {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 20px;
+}
+.contact-text {
+  font-size: 15px;
+}
+.contact-text2 {
+  font-size: 12px;
+  text-align: center;
+  padding-bottom: 18px;
+}
+
+input[type=email], input[type=text] {
+  width: 600px;
+  border: 2px solid #082B48;
+  font-size: 15px;
+  margin: auto;
+  padding: 18px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+textarea {
+  width: 600px;
+  border: 2px solid #082B48;
+  font-size: 15px;
+  margin: auto;
+  padding: 18px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+select {
+  width: 200px;
+  height: 50px;
+  border: 2px solid #082B48;
+  border-radius: 4px;
+  font-size: 16px;
+  padding-left: 13px;
+  margin-bottom: 15px;
+}
+
+/*==============================
+無料体験/お問い合わせボタン
+===============================*/
+.contact-underline {
+  border-bottom: 1px solid #082B48;
+}
+.contact-btn {
+  position: relative;
+  padding: 20px 30px;
+  display: inline-block;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: #fd865c;
+  box-shadow: 0 7px 0 #cd6c49;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 999px;
+  border-style: none;
+  border: none;
+  width: 60%;
+  margin: auto;
+}
+.contact-btn-register {
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 100px;
+}
+.contact-btn-text {
+  color: #fff;
+}
+.contact-btn:active {
+  box-shadow: none;
+  transform: translateY(5px);
+}
+.contact-btn:hover {
+  opacity: 0.9;
+}
+
+/*==================
+戻るボタン
+===================*/
+.pagetop {
+  height: 50px;
+  width: 50px;
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  background: #a9e3fb;
+  border: solid 2px #082B48;
+  border-radius: 50%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  cursor: pointer;
+}
+.pagetop__arrow {
+  display: block;
+  height: 10px;
+  width: 10px;
+  border-top: 3px solid #082B48;
+  border-right: 3px solid #082B48;
+  transform: translateY(20%) rotate(-45deg);
+}
+
+/*==============================
+footer
+===============================*/
+footer {
+  background-color: #3448a1;
+  color: #fff;
+  padding: 17px 0;
+}
+
+.copyright {
+  font-size: 12px;
+  float: right;
+}
+
+/*======================================================
+iPad版
+=======================================================*/
+@media only screen and (max-width: 1037px) {
+  clear::after {
+    content: none;
+  }
+  /*==============================
+  header
+  ===============================*/
+  header {
+    padding-top: 0;
+    padding-bottom: 60px;
+  }
+  .header-title {
+    margin-top: 10px;
+    margin-left: 20px;
+    font-size: 22px;
+    left: 0;
+  }
+  .header-nav-item {
+    float: none;
+    display: none;
+  }
+  /*==============================
+  ハンバーガーメニュー
+  ===============================*/
+  .burger {
+    float: right;
+    margin-right: 30px;
+    margin-top: -18px;
+    width: 35px;
+    height: 35px;
+    background-image: url(../img/burger2.png);
+    background-size: 19px;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 4px;
+    position: relative;
+    z-index: 2;
+    cursor: pointer;
+  }
+  .burger:hover {
+    background-color: #d1edfa;
+  }
+  .burger.is-active {
+    background-image: url(../img/close.png);
+  }
+  .menu {
+    color: #fff;
+    background-color: #3448a1;
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 60px;
+    display: flex;
+    position: fixed;
+    width: 270px;
+    height: 530px;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    opacity: 0.95;
+    display: none;
+  }
+  .menu ul {
+    padding-left: 23px;
+  }
+  .menu ul li:hover {
+    background-color: #7cc0e2;
+    padding: 0;
+    border-radius: 10px;
+    font-size: 19px;
+  }
+  .menu ul li {
+    list-style: none;
+    display: block;
+    width: 100%;
+    position: relative;
+    border-radius: 10px;
+  }
+  .menu ul li.active {
+    opacity: 0.9px;
+  }
+  .menu a:hover {
+    color: #04053e;
+    opacity: 1px;
+  }
+  .menu-title {
+    font-size: 22px;
+    border-bottom: 2px dotted #fff;
+    padding: 0 0 6px 0;
+    margin-left: 15px;
+  }
+  .menu-item {
+    list-style: none;
+    margin-right: 0;
+  }
+  .menu-item a {
+    color: #fff;
+    padding: 0;
+  }
+  .menu-list {
+    padding-right: 30px;
+  }
+  .menu.is-active {
+    display: flex;
+  }
+  ion-icon {
+    margin: 0 16px -10px 0;
+    padding-left: 18px;
+    font-size: 32px;
+  }
+  .heder-right {
+    display: none !important;
+  }
+  /*==============================
+  top  無料体験ボタン
+  ===============================*/
+  .btn-click {
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: -30px;
+  }
+  .btn ion-icon {
+    display: inline-block;
+    padding: 0;
+    width: 55px;
+    height: 48px;
+  }
+  /*==============================
+  サイドメニュー
+  ===============================*/
+  .side-nav {
+    display: none;
+  }
+  /*==============================
+  top
+  ===============================*/
+  .container {
+    width: 100%;
+  }
+  .experience-img {
+    margin: -25px 0 10px 0;
+  }
+  .ex {
+    padding: 9px 0;
+  }
+  .ex-title-text {
+    font-size: 32px;
+    padding: 0;
+    margin-bottom: 40px;
+  }
+  .ex-subtitle {
+    font-size: 14px;
+  }
+  /*==============================
+  about 無料体験
+  ===============================*/
+  .ex-about-left {
+    display: block;
+    width: 80%;
+    margin-top: 0;
+    margin-left: 75px;
+  }
+  .ex-about-img {
+    border-radius: 10px;
+  }
+  .ex-about-right {
+    justify-content: center;
+    text-align: center;
+    display: block;
+    width: 80%;
+    margin-top: 24px;
+    margin-right: 75px;
+  }
+  .ex-about-title {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    padding-bottom: 0;
+    margin-bottom: 40px;
+  }
+  .ex-about-text {
+    font-size: 18px;
+    line-height: none;
+  }
+  .ex-about-point {
+    font-size: 12px;
+  }
+  .ex-about-border {
+    border-bottom: solid 2px #082B48;
+  }
+  .ex-about-color {
+    background: linear-gradient(transparent 70%, rgba(255, 153, 0, 0.5) 80%);
+    display: inline;
+  }
+  /*==============================
+  about ステップ
+  ===============================*/
+  .ex-step-title {
+    padding: 0;
+  }
+  .ex-step-title2 {
+    font-size: 32px;
+  }
+  .ex-step-message {
+    margin: 0 20px;
+    padding-bottom: 0;
+    margin-bottom: 45px;
+  }
+  /*==============================
+  キャンペーン
+  ===============================*/
+  .experience-cp {
+    height: 565px;
+    margin-top: 20px;
+    margin-bottom: 0;
+  }
+  .ex-cp-img {
+    margin-top: 10px;
+    width: 330px;
+  }
+  /*==============================
+  contact
+  ===============================*/
+  .section-title {
+    margin-top: 0;
+    padding-top: 50px;
+    margin-bottom: 30px;
+  }
+  .contact {
+    padding-top: 0;
+  }
+  .contact-wrapper {
+    padding-top: 0;
+  }
+  .contact-message {
+    margin-top: 0;
+  }
+  /*==============================
+  footer
+  ===============================*/
+  .copyright {
+    padding-right: 10px;
+  }
+}
+/*======================================================
+スマホ版
+=======================================================*/
+@media only screen and (max-width: 740px) {
+  clear::after {
+    content: none;
+  }
+  /*==============================
+  header
+  ===============================*/
+  header {
+    padding: 5px 0 18px 0;
+    position: fixed;
+    height: 49px;
+  }
+  .header-title {
+    margin-top: 8px;
+    margin-left: 10px;
+    font-size: 16px;
+    left: 0;
+  }
+  .header-nav-item {
+    float: none;
+    display: none;
+  }
+  .header-img {
+    width: 22px;
+    height: 22px;
+    margin-bottom: 0;
+  }
+  /*=====================================
+  ポップアップ広告
+  ======================================*/
+  .pop {
+    width: 60%;
+  }
+  .pop-img {
+    width: 300px;
+  }
+  .pop-btn-apply {
+    left: 130px;
+    line-height: 25px;
+    width: 50%;
+    bottom: 15px;
+    padding: 10px 0 10px 30px;
+  }
+  /*==============================
+  top 
+  ===============================*/
+  .experience-top {
+    margin-top: 49px;
+    padding: 0 0 20px 0;
+  }
+  .experience-img {
+    display: none !important;
+  }
+  .experience-img2 {
+    display: block !important;
+  }
+  .ex {
+    /*==============================
+    about
+    ===============================*/
+  }
+  .ex-title-text {
+    font-size: 25px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .ex-about-left {
+    display: block;
+    width: 100%;
+    margin-top: 0;
+    margin-left: 0;
+  }
+  .ex-about-right {
+    display: block;
+    width: 90%;
+    margin-top: 0;
+    margin-right: 20px;
+  }
+  .ex-about-title {
+    text-align: center;
+    font-size: 21px;
+    font-weight: bold;
+    margin-bottom: 30px;
+  }
+  .ex-about-text {
+    font-size: 17px;
+    line-height: 31px;
+  }
+  .ex-about-point {
+    font-size: 11px;
+  }
+  /*==============================
+  ハンバーガーメニュー
+  ===============================*/
+  .burger {
+    width: 31px;
+    height: 31px;
+    margin-right: 13px;
+    margin-top: -31px;
+    background-image: url(../img/burger2.png);
+    background-size: 18px;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 4px;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+  }
+  .burger:hover {
+    background-color: #d1edfa;
+  }
+  .burger.is-active {
+    background-image: url(../img/close.png);
+  }
+  .menu {
+    color: #fff;
+    background-color: #3448a1;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 48px;
+    display: flex !important;
+    position: fixed;
+    width: 240px;
+    height: 430px;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    opacity: 0.95;
+    display: none;
+  }
+  .menu ul {
+    padding-left: 23px;
+  }
+  .menu ul li:hover {
+    background-color: #7cc0e2;
+    padding: 0;
+    border-radius: 10px;
+    font-size: 19px;
+  }
+  .menu ul li {
+    list-style: none;
+    display: block;
+    width: 100%;
+    position: relative;
+    border-radius: 10px;
+  }
+  .menu ul li.active {
+    opacity: 0.9px;
+  }
+  .menu a:hover {
+    color: #04053e;
+    opacity: 1px;
+  }
+  .menu-title {
+    font-size: 22px;
+    border-bottom: 2px dotted #fff;
+    padding: 0 0 4px 0;
+    margin-left: 15px;
+  }
+  .menu-item {
+    list-style: none;
+    margin-right: 0;
+  }
+  .menu-list {
+    padding-right: 30px;
+  }
+  .menu.is-active {
+    display: flex;
+  }
+  ion-icon {
+    margin: 0 12px -5px 0;
+    padding-left: 16px;
+    font-size: 27px;
+  }
+  .heder-right {
+    display: none !important;
+  }
+  /*==============================
+  top  無料体験ボタン
+  ===============================*/
+  .btn {
+    margin: 30px 0 10px 0;
+  }
+  .btn a {
+    display: inline-block;
+    padding: 18px 19px 17px 16px;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  .btn-click {
+    font-size: 16px;
+    font-weight: bold;
+    margin-right: -30px;
+    border-bottom: solid 1px #fff;
+  }
+  .btn ion-icon {
+    display: inline-block;
+    padding: 0;
+    width: 39px;
+    height: 38px;
+  }
+  /*==============================
+  about ステップ
+  ===============================*/
+  .ex-step {
+    padding: 0;
+  }
+  .ex-step-title {
+    margin-top: 17px;
+    padding-top: 20px;
+    margin-top: 0;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  .ex-step-title2 {
+    margin-top: 0;
+    font-size: 25px;
+  }
+  .ex-step-item {
+    display: block;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .ex-step-text-title1 {
+    font-size: 19px;
+  }
+  .ex-step-text-title2 {
+    font-size: 19px;
+  }
+  .ex-step-text-title3 {
+    font-size: 19px;
+  }
+  .ex-step-img {
+    width: 100%;
+    padding-top: 0;
+    margin-top: 0;
+    padding-bottom: 40px;
+  }
+  .ex-step-text-item {
+    display: inline-flex;
+  }
+  .ex-step-message {
+    text-align: center;
+    margin: 0;
+    padding: 0 20px;
+    line-height: 32px;
+  }
+  .ex-step-message2 {
+    margin-top: 0;
+    font-size: 17px;
+  }
+  /*==============================
+  キャンペーン
+  ===============================*/
+  .experience-cp {
+    height: 470px;
+    margin-top: 30px;
+    padding-top: 15px;
+  }
+  .ex-cp-title {
+    padding-top: 0;
+  }
+  .ex-cp-text {
+    font-size: 22px;
+    padding: 0 10px;
+    line-height: 35px;
+  }
+  .ex-cp-text br {
+    display: none;
+  }
+  .ex-cp-img {
+    width: 70%;
+    margin-top: 10px;
+    margin-bottom: 15px;
+  }
+  .ex-cp-point {
+    font-size: 35px;
+  }
+  /*==============================
+  contact
+  ===============================*/
+  .section-title {
+    font-size: 20px;
+    margin-bottom: 10px;
+    padding-top: 40px;
+  }
+  .contact {
+    background-image: none;
+    padding-top: 5px;
+  }
+  .contact-message {
+    margin-top: 10px;
+    margin-bottom: 35px;
+    font-size: 16px;
+  }
+  .contact-text2 {
+    width: 50%;
+    padding-left: 10px;
+  }
+  input[type=email], input[type=text] {
+    width: 300px;
+  }
+  textarea {
+    width: 300px;
+  }
+  /*==============================
+  無料体験/お問い合わせボタン
+  ===============================*/
+  .contact-text2 {
+    padding: 0;
+  }
+  .contact-btn {
+    padding: 20px 10px;
+    top: 20px;
+    left: 30px;
+    display: inline-block;
+    text-align: center;
+    font-size: 20px;
+    border: none;
+    margin: 0;
+  }
+  .contact-btn-register {
+    display: block;
+    width: 45%;
+    left: 10px;
+    margin: 0 0 60px 7px;
+  }
+  /*==============================
+  footer
+  ===============================*/
+  footer {
+    margin-top: 0;
+    padding-left: 10px;
+  }
+}
+/*# sourceMappingURL=experience.css.map */
