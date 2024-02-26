@@ -1,174 +1,218 @@
+
 @charset "UTF-8";
+@use 'base/variables' as v;
+
+$base-color: #7cc0e2;
+
 body {
-  color: #082B48;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  line-height: 1.5;
+    @include v.iro;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    line-height: 1.5;
 }
 
 img {
-  width: 100%;
-  height: auto;
+    width: 100%;
+    height: auto;
 }
 
 a {
-  text-decoration: none;
-  color: #082B48;
-}
-a:hover {
-  opacity: 0.7;
+    text-decoration: none;
+    @include v.iro;
+
+    &:hover {
+        opacity: 0.7;
+    }
 }
 
 .container {
-  width: 90%;
-  max-width: 1200px;
-  margin: auto;
-}
-.container::after {
-  content: "";
-  clear: both;
-  display: block;
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+
+    &::after {
+        content:"";
+        clear: both;
+      display: block;
+    }
 }
 
 /*=====================================
 ヘッダー
 ======================================*/
+
+
 header {
-  padding: 8px 0 75px 0;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 16px;
-  background-color: #fff;
-  z-index: 9999;
+    padding: 8px 0 75px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 16px;
+    background-color: #fff;
+    z-index: 9999;
 }
 
-.header-left {
-  float: left;
+.header {
+    &-left {
+        float: left;
+    }
+
+    &-title {
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    &-right {
+        float:right;
+    }
+
+    &-nav-item {
+        float: left;
+        margin-left: 50px;
+
+         a {
+            font-size: 15px;
+            font-weight: 600;
+            line-height: 36px;
+        }
+    }
+
+    &-nav-img {
+        width: 17px;
+        height: 17px;
+        vertical-align: -2px;
+    }
+
+    &-img {
+        width: 35px;
+        height: 35px;
+        margin-right: 5px;
+        vertical-align: -4px;
+    }
+
 }
-.header-title {
-  font-size: 24px;
-  font-weight: bold;
-}
-.header-right {
-  float: right;
-}
-.header-nav-item {
-  float: left;
-  margin-left: 50px;
-}
-.header-nav-item a {
-  font-size: 15px;
-  font-weight: 600;
-  line-height: 36px;
-}
-.header-nav-img {
-  width: 17px;
-  height: 17px;
-  vertical-align: -2px;
-}
-.header-img {
-  width: 35px;
-  height: 35px;
-  margin-right: 5px;
-  vertical-align: -4px;
-}
+
 
 .menu {
   display: none;
 }
 
+
 /*=====================================
 ドロワーメニュー
 ======================================*/
+
 ul li a {
-  display: block;
-  color: #082B48;
-  padding: 3px 0;
+    display: block;
+    @include v.iro;
+    padding: 3px 0;
 }
 
 #toggle {
-  position: relative;
+    position: relative;
 }
 
 .toggle-list {
-  display: none;
-  width: 120px;
-  position: absolute;
-  top: 40px;
-  left: 0px;
-  background-color: #fff;
-  opacity: 0.8;
-  padding-left: 3px;
-  border-radius: 5px;
+    display: none;
+    width: 120px;
+    position: absolute;
+    top: 40px;
+    left:0px;
+    background-color: #fff;
+    opacity: 0.8;
+    padding-left: 3px;
+    border-radius: 5px;
 }
 
 .header-nav {
-  display: flex;
-}
-.header-nav-iem:not(:first-child) {
-  margin-left: 30px;
+    display: flex;
+
+    &-iem:not(:first-child) {
+        margin-left: 30px;
+    }
 }
 
 /*==============================
 section 共通クラス
 ===============================*/
+
 .section {
   padding: 10px 0;
-}
-.section-title {
-  font-size: 32px;
-  font-weight: bold;
-  text-align: center;
-  margin-bottom: 40px;
-}
-.section-text {
-  font-size: 18px;
-  text-align: center;
-  padding-bottom: 20px;
-  margin-bottom: 50px;
-  border-bottom: 1px solid #082B48;
-}
-.section-text2 {
-  font-size: 18px;
-  padding-top: 8px;
+
+  &-title {
+      font-size: 32px;
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: 40px;
+  }
+
+  &-text {
+      font-size: 18px;
+      text-align: center;
+      padding-bottom: 20px;
+      margin-bottom: 50px;
+      border-bottom: 1px solid #082B48;
+  }
+
+  &-text2 {
+      font-size: 18px;
+      padding-top: 8px;
+
+  }
 }
 
 /*==============================
 top
 ===============================*/
-.privacy-img {
-  margin-top: 85px;
-  display: block !important;
-}
-.privacy-img2 {
-  display: none !important;
+
+.privacy {
+
+  &-img {
+    margin-top: 85px;
+    display:  block !important;
+  }
+
+  &-img2 {
+    display: none !important;
+  }
 }
 
 /*==============================
 テキスト
 ===============================*/
-.privacy-wrapper {
-  width: 70%;
-  max-width: 1200px;
-  margin: auto;
-  margin-bottom: 120px;
+
+.privacy {
+
+  &-wrapper {
+    width: 70%;
+    max-width: 1200px;
+    margin: auto;
+    margin-bottom: 120px;
+  }
+
+  &-title {
+    text-align: center;
+    margin: 50px 0 60px 0;
+    font-size: 30px;
+  }
+
+  &-text {
+    font-size: 18px;
+  }
+
+  &-text2 {
+    margin-bottom: 20px;
+  }
+
+
+  
 }
-.privacy-title {
-  text-align: center;
-  margin: 50px 0 60px 0;
-  font-size: 30px;
-}
-.privacy-text {
-  font-size: 18px;
-}
-.privacy-text2 {
-  margin-bottom: 20px;
-}
+
 
 /*==================
 戻るボタン
 ===================*/
+
 .pagetop {
   height: 50px;
   width: 50px;
@@ -183,19 +227,24 @@ top
   align-items: center;
   z-index: 2;
   cursor: pointer;
+
+  &__arrow {
+      display: block;
+      height: 10px;
+      width: 10px;
+      border-top: 3px solid #082B48;
+      border-right: 3px solid #082B48;
+      transform: translateY(20%) rotate(-45deg);
+  }
+
 }
-.pagetop__arrow {
-  display: block;
-  height: 10px;
-  width: 10px;
-  border-top: 3px solid #082B48;
-  border-right: 3px solid #082B48;
-  transform: translateY(20%) rotate(-45deg);
-}
+
+
 
 /*==============================
 footer
 ===============================*/
+
 footer {
   background-color: #3448a1;
   color: #fff;
@@ -208,33 +257,48 @@ footer {
   float: right;
 }
 
+
+
 /*======================================================
 iPad版
 =======================================================*/
+
 @media only screen and (max-width: 1050px) {
+
   clear::after {
-    content: none;
+      content: none;
   }
+
   /*==============================
   header
   ===============================*/
+
   header {
     padding-top: 0;
     padding-bottom: 43px;
-  }
-  .header-title {
-    margin-top: 10px;
-    margin-left: 20px;
-    font-size: 22px;
-    left: 0;
-  }
-  .header-nav-item {
-    float: none;
-    display: none;
-  }
+}
+
+.header {
+
+    &-title {
+        margin-top: 10px;
+        margin-left: 20px;
+        font-size: 22px;
+        left: 0;
+    }
+
+    &-nav-item {
+        float: none;
+        display: none;
+    }
+}
+
+
+
   /*==============================
   ハンバーガーメニュー
   ===============================*/
+
   .burger {
     float: right;
     margin-right: 30px;
@@ -249,14 +313,17 @@ iPad版
     position: relative;
     z-index: 2;
     cursor: pointer;
-  }
-  .burger:hover {
-    background-color: #d1edfa;
-  }
-  .burger.is-active {
-    background-image: url(../img/close.png);
-  }
-  .menu {
+
+    &:hover {
+        background-color: #d1edfa;
+    }
+
+    &.is-active {
+        background-image: url(../img/close.png);
+    }
+}
+
+.menu {
     color: #fff;
     background-color: #3448a1;
     font-size: 15px;
@@ -270,238 +337,336 @@ iPad版
     right: 0;
     z-index: 1;
     opacity: 0.95;
+
+    ul {
+        padding-left: 23px;
+    }
+
+    ul li:hover {
+        background-color: #7cc0e2;
+        padding: 0;
+        border-radius: 10px;
+        font-size: 17px;
+    }
+
+
+    ul li {
+        list-style: none;
+        display: block;
+        width: 100%;
+        position: relative;
+        border-radius: 10px;
+
+        &.active {
+            opacity: 0.9px;
+        }
+    }
+
+    a:hover {
+        color: #04053e;
+        opacity: 1px;
+    }
+
+    &-title {
+        font-size: 22px;
+        border-bottom: 2px dotted #fff;
+        padding: 0 0 6px 0;
+        margin-left: 15px;
+    }
+
+    &-item {
+        list-style: none;
+        margin-right: 0;
+        
+        a {
+            color: #fff;
+            padding: 0;
+        }
+    }
+
+    &-list {
+        padding-right: 30px;
+    }
+
     display: none;
-  }
-  .menu ul {
-    padding-left: 23px;
-  }
-  .menu ul li:hover {
-    background-color: #7cc0e2;
-    padding: 0;
-    border-radius: 10px;
-    font-size: 19px;
-  }
-  .menu ul li {
-    list-style: none;
-    display: block;
-    width: 100%;
-    position: relative;
-    border-radius: 10px;
-  }
-  .menu ul li.active {
-    opacity: 0.9px;
-  }
-  .menu a:hover {
-    color: #04053e;
-    opacity: 1px;
-  }
-  .menu-title {
-    font-size: 22px;
-    border-bottom: 2px dotted #fff;
-    padding: 0 0 6px 0;
-    margin-left: 15px;
-  }
-  .menu-item {
-    list-style: none;
-    margin-right: 0;
-  }
-  .menu-item a {
-    color: #fff;
-    padding: 0;
-  }
-  .menu-list {
-    padding-right: 30px;
-  }
-  .menu.is-active {
-    display: flex;
-  }
-  ion-icon {
-    margin: 0 16px -10px 0;
-    padding-left: 18px;
-    font-size: 32px;
-  }
-  .heder-right {
-    display: none !important;
-  }
+
+    }
+
+    .menu.is-active {
+        display: flex;
+    }
+
+
+    ion-icon {
+        margin: 0 16px -10px 0;
+        padding-left: 18px;
+        font-size: 32px;
+    }
+
+
+
+    .heder-right {
+        display: none !important;
+    }
+
+
+
   /*==============================
   サイドメニュー
   ===============================*/
+
   .side-nav {
-    display: none;
+      display: none;
   }
+
+
   /*==============================
   top
   ===============================*/
+
   .container {
-    width: 100%;
+      width: 100%;
   }
+
+
   .privacy-img {
-    margin-top: 60px;
+      margin-top: 60px;
   }
+
   .top {
-    padding: 9px 0;
+      padding: 9px 0;
+
+      &-title {
+          font-size: 32px;
+      }
+
+      &-subtitle {
+          font-size: 14px;
+      }
+
+    }
+
+
+    /*==============================
+    footer
+    ===============================*/
+
+    .copyright {
+      padding-right: 10px;
+    }
+
   }
-  .top-title {
-    font-size: 32px;
-  }
-  .top-subtitle {
-    font-size: 14px;
-  }
-  /*==============================
-  footer
-  ===============================*/
-  .copyright {
-    padding-right: 10px;
-  }
-}
+
+
+
+
 /*======================================================
 スマホ版
 =======================================================*/
+
 @media only screen and (max-width: 740px) {
+
   clear::after {
-    content: none;
+      content: none;
   }
-  /*==============================
-  header
-  ===============================*/
-  header {
-    padding: 5px 0 31px 0;
-    position: fixed;
+
+
+    /*==============================
+    header
+    ===============================*/
+
+    header {
+      padding: 5px 0 31px 0;
+      position: fixed;
   }
-  .header-title {
-    margin-top: 8px;
-    margin-left: 10px;
-    font-size: 16px;
-    left: 0;
+
+
+  .header {
+
+      &-title {
+          margin-top: 8px;
+          margin-left: 10px;
+          font-size: 16px;
+          left: 0;
+      }
+
+      &-nav-item {
+          float: none;
+          display: none;
+      }
+
+
+      &-img {
+          width: 22px;
+          height: 22px;
+          margin-bottom: 0;
+      }
   }
-  .header-nav-item {
-    float: none;
-    display: none;
+
+
+
+    /*==============================
+    ハンバーガーメニュー
+    ===============================*/
+
+    .burger {
+        width: 31px;
+        height: 31px;
+        margin-right: 13px;
+        margin-top: -29px;
+        background-image: url(../img/burger2.png);
+        background-size: 18px;
+        background-repeat: no-repeat;
+        background-position: center;
+        border-radius: 4px;
+        cursor: pointer;
+        position: relative;
+        z-index: 2;
+  
+        &:hover {
+            background-color: #d1edfa;
+        }
+  
+        &.is-active {
+            background-image: url(../img/close.png);
+        }
+    }
+  
+  
+    .menu {
+        color: #fff;
+        background-color: #3448a1;
+        font-size: 14px;
+        font-weight: bold;
+        line-height: 48px;
+        display: flex;
+        position: fixed;
+        width: 240px;
+        height: 430px;
+        top: 0;
+        right: 0;
+        z-index: 1;
+        opacity: 0.95;
+  
+        ul {
+            padding-left: 23px;
+        }
+  
+        ul li:hover {
+            background-color: #7cc0e2;
+            padding: 0;
+            border-radius: 10px;
+            font-size: 17px;
+        }
+  
+  
+        ul li {
+            list-style: none;
+            display: block;
+            width: 100%;
+            position: relative;
+            border-radius: 10px;
+    
+            &.active {
+                opacity: 0.9px;
+            }
+        }
+  
+        a:hover {
+            color: #04053e;
+            opacity: 1px;
+        }
+  
+        &-title {
+            font-size: 22px;
+            border-bottom: 2px dotted #fff;
+            padding: 0 0 4px 0;
+            margin-left: 15px;
+  
+        }
+  
+  
+        &-item {
+            list-style: none;
+            margin-right: 0;
+        }
+  
+        &-list {
+            padding-right: 30px;
+        }
+        
+        display: none;
+    }
+  
+    .menu.is-active {
+        display: flex;
+    }
+  
+  
+    ion-icon {
+        margin: 0 12px -5px 0;
+        padding-left: 16px;
+        font-size: 27px;
+    }
+  
+  
+  
+    .heder-right {
+        display: none !important;
+    }
+
+
+    /*==============================
+    top 
+    ===============================*/
+
+    .privacy {
+
+      &-wrapper {
+        width: 90%;
+      }
+
+      &-top {
+
+        margin-top: 20px;
+        padding: 0 0 25px 0 ;
+      }
+
+      &-title {
+        font-size: 24px;
+      }
+
+      &-text {
+        font-size: 20px;
+      }
+
+      &-text2 {
+        font-size: 19px;
+        margin-bottom: 40px;
+      }
+
+      &-img {
+        
+        display:  none !important;
+      }
+    
+      &-img2 {
+        margin-top: 53px;
+        display: block !important;
+      }
   }
-  .header-img {
-    width: 22px;
-    height: 22px;
-    margin-bottom: 0;
-  }
-  /*==============================
-  ハンバーガーメニュー
-  ===============================*/
-  .burger {
-    width: 31px;
-    height: 31px;
-    margin-right: 13px;
-    margin-top: -31px;
-    background-image: url(../img/burger2.png);
-    background-size: 18px;
-    background-repeat: no-repeat;
-    background-position: center;
-    border-radius: 4px;
-    cursor: pointer;
-    position: relative;
-    z-index: 2;
-  }
-  .burger:hover {
-    background-color: #d1edfa;
-  }
-  .burger.is-active {
-    background-image: url(../img/close.png);
-  }
-  .menu {
-    color: #fff;
-    background-color: #3448a1;
-    font-size: 14px;
-    font-weight: bold;
-    line-height: 48px;
-    display: flex !important;
-    position: fixed;
-    width: 240px;
-    height: 430px;
-    top: 0;
-    right: 0;
-    z-index: 1;
-    opacity: 0.95;
-    display: none;
-  }
-  .menu ul {
-    padding-left: 23px;
-  }
-  .menu ul li:hover {
-    background-color: #7cc0e2;
-    padding: 0;
-    border-radius: 10px;
-    font-size: 19px;
-  }
-  .menu ul li {
-    list-style: none;
-    display: block;
-    width: 100%;
-    position: relative;
-    border-radius: 10px;
-  }
-  .menu ul li.active {
-    opacity: 0.9px;
-  }
-  .menu a:hover {
-    color: #04053e;
-    opacity: 1px;
-  }
-  .menu-title {
-    font-size: 22px;
-    border-bottom: 2px dotted #fff;
-    padding: 0 0 4px 0;
-    margin-left: 15px;
-  }
-  .menu-item {
-    list-style: none;
-    margin-right: 0;
-  }
-  .menu-list {
-    padding-right: 30px;
-  }
-  .menu.is-active {
-    display: flex;
-  }
-  ion-icon {
-    margin: 0 12px -5px 0;
-    padding-left: 16px;
-    font-size: 27px;
-  }
-  .heder-right {
-    display: none !important;
-  }
-  /*==============================
-  top 
-  ===============================*/
-  .privacy-wrapper {
-    width: 90%;
-  }
-  .privacy-top {
-    margin-top: 20px;
-    padding: 0 0 25px 0;
-  }
-  .privacy-title {
-    font-size: 24px;
-  }
-  .privacy-text {
-    font-size: 20px;
-  }
-  .privacy-text2 {
-    font-size: 19px;
-    margin-bottom: 40px;
-  }
-  .privacy-img {
-    display: none !important;
-  }
-  .privacy-img2 {
-    margin-top: 53px;
-    display: block !important;
-  }
-  /*==============================
-  footer
-  ===============================*/
-  footer {
-    margin-top: 0;
-    padding-left: 10px;
-  }
+
+
+
+    /*==============================
+    footer
+    ===============================*/
+
+    footer {
+      margin-top: 0;
+      padding-left: 10px;
+    }
+
 }
-/*# sourceMappingURL=privacy.css.map */
+
+
